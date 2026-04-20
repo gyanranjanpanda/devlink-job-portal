@@ -13,7 +13,7 @@ A full-stack job portal for developers, built with the MERN stack + Socket.io.
 ## Tech Stack
 - **Frontend:** React 18, Vite, Tailwind CSS, Zustand, React Router v6, Socket.io-client
 - **Backend:** Node.js, Express, MongoDB (Mongoose), Socket.io, JWT, bcryptjs
-- **Deploy:** Vercel (frontend) + Railway (backend + MongoDB Atlas)
+- **Deploy:** Render (Unified Web Service + MongoDB Atlas)
 
 ## Setup
 
@@ -44,8 +44,10 @@ CLOUDINARY_API_KEY=...
 CLOUDINARY_API_SECRET=...
 ```
 
-## Deploy to Vercel + Railway
-1. Push to GitHub
-2. Railway: deploy `server/` → set env vars → note the URL
-3. Vercel: deploy `client/` → set `VITE_API_URL` to your Railway URL
-4. Update `CLIENT_URL` in Railway env to your Vercel URL
+## Deploy to Render (Unified Service)
+1. Push your code to GitHub.
+2. Sign up / Log in to [Render](https://render.com).
+3. Connect your GitHub repository.
+4. Render will automatically detect the `render.yaml` configuration file and propose the creation of the `devlink` Web Service.
+5. Provide your environment variables (`MONGO_URI`, `JWT_SECRET`, etc.) in the Render dashboard.
+6. Deploy! Render will build the React frontend and serve it using the Express backend automatically.
